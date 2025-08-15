@@ -10,6 +10,7 @@ import {
   ChevronDown,
   Database,
   Globe,
+  GraduationCap,
   Server,
   Palette,
   Settings,
@@ -51,6 +52,8 @@ function App() {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  // -----------------------------------------------------------
 
   const skills = [
     {
@@ -103,57 +106,90 @@ function App() {
     },
   ];
 
-  // --------- NOUVEAU : Expériences pour la timeline ----------
+  // -----------------------------------------------------------
+
   const experiences = [
     {
-      company: "Startup Nova",
-      role: "Développeuse Full-Stack",
-      period: "Jan. 2024 – Juil. 2025",
-      location: "Paris, France",
+      company: "Chambre de métiers et de l'artisanat",
+      role: "Alternance",
+      period: "2023 - 2024",
+      location: "Rouen, France",
       points: [
-        "Refonte d’une app SaaS (React + Laravel) : -35% TTFB, +28% conversion.",
-        "Mise en place CI/CD (GitHub Actions, Docker) et revues de code structurées.",
-        "Conception d’un design system Tailwind + Figma, adoption par 3 équipes.",
+        "Répondre aux demandes d'évolution des utilisateurs et les implémenter pour améliorer l'expérience utilisateur.",
+        " Différentes applications : Web, Chatbot, Scripts de synchronisation, Traitements de la donnée.",
       ],
       tech: [
-        "React",
         "Laravel",
-        "Tailwind",
-        "Docker",
-        "GitHub Actions",
+        "Livewire",
+        "Vue.js",
+        "PHP",
+        "JavaScript",
+        "Tailwind CSS",
+        "FluxUI",
+        "Power Automate",
+        "Microsoft Copilot Studio",
         "MySQL",
+        "PostgreSQL",
+        "DBeaver",
+        "GitHub",
+        "Docker",
+        "Jira",
+        "Bitbucket",
+        "GitLab",
       ],
     },
     {
-      company: "Agence PixelCraft",
-      role: "Développeuse Front-End",
-      period: "Sept. 2022 – Déc. 2023",
-      location: "Lyon, France (hybride)",
+      company: "Société des Autoroutes de Paris Normandie",
+      role: "Stage (BTS 2e année)",
+      period: "03 Janvier - 10 Février 2023",
+      location: "Oissel, France",
       points: [
-        "Développement de sites Nuxt.js à fort trafic (SEO/SSR).",
-        "Création de composants accessibles (a11y) et animations légères.",
-        "Optimisation Lighthouse (Perf/SEO) > 95 sur 6 projets.",
+        "Réalisation d'une application métier complète avec la Power Platform.",
+        "Création de flux automatisés via Power Automate pour optimiser les processus internes.",
+        "Conception d'interfaces utilisateur interactives avec Power Apps.",
+        "Analyse des besoins utilisateurs et traduction en fonctionnalités techniques.",
+        "Mise en place de tests et ajustements pour assurer la fiabilité et la performance de l'application.",
       ],
-      tech: ["Nuxt.js", "Vue.js", "Tailwind CSS", "Vite", "Figma"],
+      tech: ["Power Automate", "Power Apps"],
+      during: "Pendant le BTS SIO (2021-2023)",
     },
     {
-      company: "Freelance",
-      role: "Développeuse Web",
-      period: "2021 – 2022",
-      location: "Remote",
+      company: "Carrefour",
+      role: "Contrat étudiant",
+      period: "Février 2022 - Septembre 2023",
+      location: "Mont-Saint-Aignan, France",
       points: [
-        "API Node/Express pour intégrations partenaires (JWT, rate limit).",
-        "Mini-pipeline d’ETL Python pour enrichir des données produits.",
-        "Accompagnement clients : cadrage, backlog, livrables.",
+        "Préparatrice de commandes en environnement logistique dynamique.",
+        "Développement de la rigueur et de l'organisation pour respecter des délais stricts.",
+        "Gestion des priorités et adaptation rapide aux imprévus.",
+        "Travail en équipe et communication efficace pour coordonner les tâches.",
+        "Utilisation d'outils numériques internes pour la gestion et le suivi des commandes.",
       ],
-      tech: ["Node.js", "Express", "PostgreSQL", "Python", "Docker"],
+      tech: [],
+      during: "Pendant le BTS SIO (2021-2023)",
+    },
+    {
+      company: "Trescal",
+      role: "Stage (BTS 1re année)",
+      period: "30 Mai – 1 Juillet 2022",
+      location: "Bihorel, France",
+      points: [
+        "Réalisation et exécution de tests unitaires en C# pour vérifier la stabilité et la conformité des modules développés.",
+        "Mise en place et exécution de tests de scénarios web automatisés en JavaScript.",
+        "Analyse et correction des anomalies détectées afin d'optimiser la qualité du code.",
+        "Renforcement des compétences en débogage et en validation logicielle.",
+        "Collaboration avec l'équipe de développement pour améliorer la couverture de test et les bonnes pratiques de qualité logicielle.",
+      ],
+      tech: ["C#", "JavaScript"],
+      during: "Pendant le BTS SIO (2021-2023)",
     },
   ];
+
   // -----------------------------------------------------------
 
   const projects = [
     {
-      title: "Extracteur d’identité par IA",
+      title: "Extracteur d'identité par IA",
       description:
         "Système d'extraction d'informations de documents d'identité avec reconnaissance de texte et extraction de données.",
       tech: [
@@ -164,7 +200,7 @@ function App() {
         "Annotations",
         "Dataset",
       ],
-      image: "/nltk.png",
+      image: "/passport_id.png",
       link: "https://github.com/Fulkiaaa/sentiment-api-ntlk",
     },
     {
@@ -216,6 +252,8 @@ function App() {
       link: "https://github.com/Fulkiaaa/mediatheque-local-review",
     },
   ];
+
+  // -----------------------------------------------------------
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#f5efe6" }}>
@@ -513,6 +551,7 @@ function App() {
                                   style={{
                                     backgroundColor: "#f5efe6",
                                     color: "#091433",
+                                    whiteSpace: "pre-line",
                                   }}
                                 >
                                   {p}
