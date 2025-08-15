@@ -1,43 +1,49 @@
-import React, { ReactNode } from 'react';
-import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import React, { ReactNode } from "react";
+import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 interface AnimatedSectionProps {
   children: ReactNode;
   className?: string;
-  animation?: 'slideUp' | 'slideDown' | 'slideLeft' | 'slideRight' | 'fadeIn' | 'scaleIn';
+  animation?:
+    | "slideUp"
+    | "slideDown"
+    | "slideLeft"
+    | "slideRight"
+    | "fadeIn"
+    | "scaleIn";
   delay?: number;
   duration?: number;
 }
 
 export const AnimatedSection: React.FC<AnimatedSectionProps> = ({
   children,
-  className = '',
-  animation = 'slideUp',
+  className = "",
+  animation = "slideUp",
   delay = 0,
-  duration = 600
+  duration = 600,
 }) => {
   const { elementRef, isIntersecting } = useIntersectionObserver({
     threshold: 0.1,
-    triggerOnce: true
+    triggerOnce: true,
   });
 
   const getAnimationClasses = () => {
-    const baseClasses = 'transition-all ease-out';
+    const baseClasses = "transition-all ease-out";
     const durationClass = `duration-${duration}`;
-    
+
     if (!isIntersecting) {
       switch (animation) {
-        case 'slideUp':
+        case "slideUp":
           return `${baseClasses} ${durationClass} transform translate-y-8 opacity-0`;
-        case 'slideDown':
+        case "slideDown":
           return `${baseClasses} ${durationClass} transform -translate-y-8 opacity-0`;
-        case 'slideLeft':
+        case "slideLeft":
           return `${baseClasses} ${durationClass} transform translate-x-8 opacity-0`;
-        case 'slideRight':
+        case "slideRight":
           return `${baseClasses} ${durationClass} transform -translate-x-8 opacity-0`;
-        case 'fadeIn':
+        case "fadeIn":
           return `${baseClasses} ${durationClass} opacity-0`;
-        case 'scaleIn':
+        case "scaleIn":
           return `${baseClasses} ${durationClass} transform scale-95 opacity-0`;
         default:
           return `${baseClasses} ${durationClass} transform translate-y-8 opacity-0`;
@@ -51,9 +57,9 @@ export const AnimatedSection: React.FC<AnimatedSectionProps> = ({
     <div
       ref={elementRef}
       className={`${getAnimationClasses()} ${className}`}
-      style={{ 
+      style={{
         transitionDelay: `${delay}ms`,
-        transitionDuration: `${duration}ms`
+        transitionDuration: `${duration}ms`,
       }}
     >
       {children}
