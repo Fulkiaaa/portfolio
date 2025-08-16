@@ -4,11 +4,11 @@ export const experiences: Experience[] = [
   {
     company: "Chambre de métiers et de l'artisanat",
     role: "Alternance",
-    period: "2023 - 2024",
+    period: "2023 - 2026",
     location: "Rouen, France",
     points: [
       "Répondre aux demandes d'évolution des utilisateurs et les implémenter pour améliorer l'expérience utilisateur.",
-      "Différentes applications : Web, Chatbot, Scripts de synchronisation, Traitements de la donnée.",
+      "Différentes applications : Web, Chatbot, Scripts de synchronisation, Traitements de données.",
     ],
     tech: [
       "Laravel",
@@ -30,9 +30,26 @@ export const experiences: Experience[] = [
       "GitLab",
     ],
   },
+
+  {
+    company: "La Manu",
+    role: "Mastère Data et IA en alternance",
+    period: "2024 - 2026",
+    location: "Le Havre, France",
+    points: [],
+    tech: [],
+  },
+  {
+    company: "La Manu",
+    role: "Bachelor Web & Application Developer en alternance",
+    period: "2023 - 2024",
+    location: "Le Havre, France",
+    points: [],
+    tech: [],
+  },
   {
     company: "Société des Autoroutes de Paris Normandie",
-    role: "Stage (BTS 2e année)",
+    role: "BTS SIO 2e année - Stage",
     period: "03 Janvier - 10 Février 2023",
     location: "Oissel, France",
     points: [
@@ -43,7 +60,20 @@ export const experiences: Experience[] = [
       "Mise en place de tests et ajustements pour assurer la fiabilité et la performance de l'application.",
     ],
     tech: ["Power Automate", "Power Apps"],
-    during: "Pendant le BTS SIO (2021-2023)",
+  },
+  {
+    company: "Trescal",
+    role: "BTS SIO 1re année - Stage",
+    period: "30 Mai - 1 Juillet 2022",
+    location: "Bihorel, France",
+    points: [
+      "Réalisation et exécution de tests unitaires en C# pour vérifier la stabilité et la conformité des modules développés.",
+      "Mise en place et exécution de tests de scénarios web automatisés en JavaScript.",
+      "Analyse et correction des anomalies détectées afin d'optimiser la qualité du code.",
+      "Renforcement des compétences en débogage et en validation logicielle.",
+      "Collaboration avec l'équipe de développement pour améliorer la couverture de test et les bonnes pratiques de qualité logicielle.",
+    ],
+    tech: ["C#", "JavaScript"],
   },
   {
     company: "Carrefour",
@@ -58,21 +88,22 @@ export const experiences: Experience[] = [
       "Utilisation d'outils numériques internes pour la gestion et le suivi des commandes.",
     ],
     tech: [],
-    during: "Pendant le BTS SIO (2021-2023)",
   },
   {
-    company: "Trescal",
-    role: "Stage (BTS 1re année)",
-    period: "30 Mai – 1 Juillet 2022",
-    location: "Bihorel, France",
+    company:
+      "Campus La Châtaigneraie Lycée, CFA et Centre de Formation Continue",
+    role: "BTS Services informatiques aux organisations - option Solutions Logicielles et Applications Métiers",
+    period: "2021 - 2023",
+    location: "France",
     points: [
-      "Réalisation et exécution de tests unitaires en C# pour vérifier la stabilité et la conformité des modules développés.",
-      "Mise en place et exécution de tests de scénarios web automatisés en JavaScript.",
-      "Analyse et correction des anomalies détectées afin d'optimiser la qualité du code.",
-      "Renforcement des compétences en débogage et en validation logicielle.",
-      "Collaboration avec l'équipe de développement pour améliorer la couverture de test et les bonnes pratiques de qualité logicielle.",
+      "Analyse des besoins d’une organisation et rédaction de cahiers des charges",
+      "Conception et développement d’applications métiers (web, desktop, mobile)",
+      "Mise en place et gestion de bases de données relationnelles",
+      "Maintenance évolutive et corrective d’applications",
+      "Utilisation de frameworks et environnements de développement (Symfony, .NET, etc.)",
+      "Collaboration en équipe avec des outils de gestion de versions (Git)",
+      "Veille technologique et adaptation aux nouvelles solutions logicielles",
     ],
-    tech: ["C#", "JavaScript"],
-    during: "Pendant le BTS SIO (2021-2023)",
+    tech: ["C#", "Symfony", "HTML", "CSS", "PHP", "SQL", "Git"],
   },
 ];
