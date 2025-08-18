@@ -23,9 +23,14 @@ export default function NavBar({ activeSection, onNavigate }: Props) {
     >
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         <AnimatedSection animation="slideRight" delay={100}>
-          <div className="text-2xl font-bold" style={{ color: "#091433" }}>
+          <a
+            href="https://fulkiaaa.github.io/portfolio/"
+            rel="noopener noreferrer"
+            className="text-2xl font-bold"
+            style={{ color: "#091433", textDecoration: "none" }}
+          >
             Clara
-          </div>
+          </a>
         </AnimatedSection>
         <AnimatedSection animation="slideLeft" delay={200}>
           <div className="hidden md:flex space-x-8">

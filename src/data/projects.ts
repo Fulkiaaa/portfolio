@@ -1,12 +1,14 @@
 import type { Project } from "../types";
 
+const pub = (file: string) => `${import.meta.env.BASE_URL}${file}`;
+
 export const projects: Project[] = [
   {
     title: "Spotify Statistics",
     description:
       "Interface web pour visualiser les statistiques de votre compte Spotify, incluant les artistes et chansons les plus écoutés, genres ...",
     tech: ["ReactJS", "NextJS", "Axios", "API Spotify", "Projet personnel"],
-    image: "/spotify.png",
+    image: pub("/spotify.png"),
     link: "https://github.com/Fulkiaaa/sentiment-api-ntlk",
   },
   {
@@ -22,7 +24,7 @@ export const projects: Project[] = [
       "Dataset",
       "La Manu",
     ],
-    image: "/passport_id.png",
+    image: pub("/passport_id.png"),
     link: "https://github.com/Fulkiaaa/sentiment-api-ntlk",
   },
   {
@@ -30,7 +32,7 @@ export const projects: Project[] = [
     description:
       "API d'analyse de sentiment utilisant NLTK pour traiter et analyser les émotions dans les textes en temps réel.",
     tech: ["Python", "NLTK", "Flask", "Machine Learning", "La Manu"],
-    image: "/nltk.png",
+    image: pub("/nltk.png"),
     link: "https://github.com/Fulkiaaa/sentiment-api-ntlk",
   },
   {
@@ -38,7 +40,7 @@ export const projects: Project[] = [
     description:
       "Application web de forum développée en Java Enterprise Edition avec gestion des utilisateurs et des discussions.",
     tech: ["Java", "JEE", "JSP", "MySQL", "La Manu"],
-    image: "/JEE.png",
+    image: pub("/JEE.png)"),
     link: "https://github.com/Fulkiaaa/Forum_JEE",
   },
   {
@@ -46,7 +48,7 @@ export const projects: Project[] = [
     description:
       "Application web de découverte de films avec recherche avancée, filtres et recommandations personnalisées.",
     tech: ["NuxtJS", "VueJS", "API REST", "Tailwind CSS", "Projet personnel"],
-    image: "/movie.png",
+    image: pub("/movie.png"),
     link: "https://github.com/Fulkiaaa/movie-app",
   },
   {
@@ -54,7 +56,7 @@ export const projects: Project[] = [
     description:
       "API météorologique développée en Node.js fournissant des prévisions météo en temps réel avec interface web.",
     tech: ["Node.js", "Express", "API Weather", "JavaScript", "La Manu"],
-    image: "/meteo.png",
+    image: pub("/meteo.png"),
     link: "https://github.com/Fulkiaaa/meteo-nodejs-api",
   },
   {
@@ -62,7 +64,7 @@ export const projects: Project[] = [
     description:
       "Un petit jeu de type Endless Runner en défilement horizontal. Ce projet a été réalisé pour apprendre à créer un jeu sous Android Studio.",
     tech: ["Hackathon", "Android Studio", "Java", "La Manu"],
-    image: "/assasins_run.png",
+    image: pub("/assasins_run.png"),
     link: "https://github.com/Fulkiaaa/Assassin-s-Run-2025-Hackathon",
   },
   {
@@ -76,7 +78,7 @@ export const projects: Project[] = [
       "Admin Section",
       "La Manu",
     ],
-    image: "/mediatheque.png",
+    image: pub("/mediatheque.png"),
     link: "https://github.com/Fulkiaaa/mediatheque-local-review",
   },
 ];

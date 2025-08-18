@@ -106,4 +106,12 @@ export const experiences: Experience[] = [
     ],
     tech: ["C#", "Symfony", "HTML", "CSS", "PHP", "SQL", "Git"],
   },
+  {
+    company: "Lycée Vallée du Cailly",
+    role: "Baccalauréat général",
+    period: "2021",
+    location: "76250 Déville-lès-Roue, France",
+    points: [],
+    tech: ["Mathématiques", "Sciences et Vie de la Terre", "Espagnol"],
+  },
 ];

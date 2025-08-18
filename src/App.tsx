@@ -7,6 +7,7 @@ import SkillsGrid from "./components/SkillsGrid";
 import ProjectsGrid from "./components/ProjectsGrid";
 import ContactForm from "./components/ContactForm";
 import SiteFooter from "./components/SiteFooter";
+import BackToTop from "./components/BackToTop";
 import { useActiveSection } from "./hooks/useActiveSection";
 
 export default function App() {
@@ -36,6 +37,7 @@ export default function App() {
       <ProjectsGrid />
       <ContactForm />
       <SiteFooter />
+      <BackToTop threshold={400} />
     </div>
   );
 }
