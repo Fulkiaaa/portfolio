@@ -3,7 +3,7 @@ import type { Experience } from "../types";
 export const experiences: Experience[] = [
   {
     company: "Chambre de métiers et de l'artisanat",
-    role: "Alternance",
+    role: "Alternance - La Manu",
     period: "2023 - 2026",
     location: "Rouen, France",
     points: [
@@ -49,7 +49,7 @@ export const experiences: Experience[] = [
   },
   {
     company: "Société des Autoroutes de Paris Normandie",
-    role: "BTS SIO 2e année - Stage",
+    role: "Stage - BTS SIO 2e année",
     period: "03 Janvier - 10 Février 2023",
     location: "Oissel, France",
     points: [
@@ -63,7 +63,7 @@ export const experiences: Experience[] = [
   },
   {
     company: "Trescal",
-    role: "BTS SIO 1re année - Stage",
+    role: "Stage - BTS SIO 1re année",
     period: "30 Mai - 1 Juillet 2022",
     location: "Bihorel, France",
     points: [

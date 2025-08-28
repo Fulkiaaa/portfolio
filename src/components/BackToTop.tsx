@@ -34,17 +34,24 @@ export default function BackToTop({ threshold = 400 }: Props) {
   return (
     <div
       className="fixed right-6 z-50 pointer-events-none"
-      style={{ bottom: "calc(1.5rem + env(safe-area-inset-bottom))" }} // safe area iOS
+      style={{ bottom: "calc(1.5rem + env(safe-area-inset-bottom))" }}
       aria-hidden={!visible}
     >
       <button
         type="button"
         onClick={scrollTop}
-        className={`pointer-events-auto h-12 w-12 rounded-full flex items-center justify-center transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#ff923e] shadow-neumorphism ${
-          visible
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-2 pointer-events-none"
-        }`}
+        className={`pointer-events-auto h-12 w-12 rounded-full flex items-center justify-center 
+              transition-all duration-300 ease-out
+              shadow-neumorphism-orange
+              hover:shadow-neumorphism-orange-inset
+              hover:brightness-95
+              active:scale-95
+              focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#ff923e]
+              ${
+                visible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-2 pointer-events-none"
+              }`}
         style={{ backgroundColor: "#ff923e", color: "#fff" }}
         aria-label="Remonter en haut"
       >

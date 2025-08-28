@@ -443,10 +443,10 @@ export default function ContactForm() {
                         !isValid ? "Formulaire incomplet" : "Envoyer le message"
                       }
                       className={[
-                        "w-full py-4 rounded-2xl shadow-neumorphism transition-all duration-300 font-semibold text-white",
+                        "w-full py-4 rounded-2xl shadow-neumorphism-orange transition-all duration-300 font-semibold text-white",
                         // hover UNIQUEMENT si valide
                         isValid && !state.submitting
-                          ? "hover:shadow-neumorphism-inset"
+                          ? "hover:shadow-neumorphism-orange-inset"
                           : "",
                         // en bonus: pas d'interactions quand disabled
                         "disabled:cursor-not-allowed disabled:pointer-events-none",

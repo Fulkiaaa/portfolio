@@ -36,11 +36,19 @@ export const projects: Project[] = [
     link: "https://github.com/Fulkiaaa/sentiment-api-ntlk",
   },
   {
+    title: "Assassin's Run 2025",
+    description:
+      "Un petit jeu de type Endless Runner en défilement horizontal. Ce projet a été réalisé pour apprendre à créer un jeu sous Android Studio.",
+    tech: ["Hackathon", "Android Studio", "Java", "La Manu"],
+    image: pub("/assasins_run.png"),
+    link: "https://github.com/Fulkiaaa/Assassin-s-Run-2025-Hackathon",
+  },
+  {
     title: "Forum JEE",
     description:
       "Application web de forum développée en Java Enterprise Edition avec gestion des utilisateurs et des discussions.",
     tech: ["Java", "JEE", "JSP", "MySQL", "La Manu"],
-    image: pub("/JEE.png)"),
+    image: pub("/JEE.png"),
     link: "https://github.com/Fulkiaaa/Forum_JEE",
   },
   {
@@ -58,14 +66,6 @@ export const projects: Project[] = [
     tech: ["Node.js", "Express", "API Weather", "JavaScript", "La Manu"],
     image: pub("/meteo.png"),
     link: "https://github.com/Fulkiaaa/meteo-nodejs-api",
-  },
-  {
-    title: "Assassin's Run 2025",
-    description:
-      "Un petit jeu de type Endless Runner en défilement horizontal. Ce projet a été réalisé pour apprendre à créer un jeu sous Android Studio.",
-    tech: ["Hackathon", "Android Studio", "Java", "La Manu"],
-    image: pub("/assasins_run.png"),
-    link: "https://github.com/Fulkiaaa/Assassin-s-Run-2025-Hackathon",
   },
   {
     title: "Médiathèque Local Review",

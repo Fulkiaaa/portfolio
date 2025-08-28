@@ -67,14 +67,19 @@ export default function Hero({
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <button
               onClick={onCtaProjects}
-              className="px-8 py-4 rounded-xl shadow-neumorphism hover:shadow-neumorphism-inset transition-all duration-300 text-white font-semibold"
+              className="px-8 py-4 rounded-xl font-semibold text-white
+             transition-all duration-300 ease-out
+             shadow-neumorphism-orange
+             hover:shadow-neumorphism-orange-inset
+             hover:brightness-95
+             active:scale-95"
               style={{ backgroundColor: "#ff923e" }}
             >
               Voir mes projets
             </button>
             <button
               onClick={onCtaContact}
-              className="px-8 py-4 rounded-XL shadow-neumorphism hover:shadow-neumorphism-inset transition-all duration-300 font-semibold flex items-center justify-center gap-2"
+              className="px-8 py-4 rounded-xl shadow-neumorphism hover:shadow-neumorphism-inset transition-all duration-300 font-semibold flex items-center justify-center gap-2"
               style={{ backgroundColor: "#f5efe6", color: "#091433" }}
             >
               <Mail className="w-5 h-5" />

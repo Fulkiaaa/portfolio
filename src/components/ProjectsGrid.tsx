@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { ExternalLink } from "lucide-react";
 import { AnimatedSection } from "./AnimatedSection";
 import { projects } from "../data/projects";
 
 export default function ProjectsGrid() {
+  const [showAll, setShowAll] = useState(false);
+  const visibleProjects = showAll ? projects : projects.slice(0, 6);
+
   return (
     <section id="projects" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
@@ -16,14 +20,14 @@ export default function ProjectsGrid() {
         </AnimatedSection>
 
         <div className="grid auto-rows-[1fr] md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-          {projects.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <AnimatedSection
-              key={index}
+              key={index} // idéalement un id unique si dispo
               animation="slideUp"
               delay={200 + index * 100}
             >
               <div
-                className="h-full min-h[520px] md:min-h-[520px] flex flex-col rounded-3xl shadow-neumorphism hover:shadow-neumorphism-inset transition-all duration-300 overflow-hidden group"
+                className="h-full min-h-[520px] md:min-h-[520px] flex flex-col rounded-3xl shadow-neumorphism hover:shadow-neumorphism-inset transition-all duration-300 overflow-hidden group"
                 style={{ backgroundColor: "#f5efe6" }}
               >
                 <div className="relative overflow-hidden">
@@ -49,7 +53,7 @@ export default function ProjectsGrid() {
                       {project.description}
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {project.tech.map((tech, techIndex) => (
+                      {project.tech.map((tech: string, techIndex: number) => (
                         <span
                           key={techIndex}
                           className="px-3 py-1 rounded-lg text-xs shadow-neumorphism-small"
@@ -67,8 +71,8 @@ export default function ProjectsGrid() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-auto w-full py-3 rounded-xl shadow-neumorphism hover:shadow-neumorphism-inset transition-all duration-300 font-semibold flex items-center justify-center gap-2"
-                    style={{ backgroundColor: "#ff923e", color: "white" }}
+                    className="mt-auto w-full py-3 rounded-xl font-semibold flex items-center justify-center gap-2 text-white transition-all duration-300 ease-out shadow-neumorphism-orange hover:shadow-neumorphism-orange-inset hover:brightness-95 active:scale-95"
+                    style={{ backgroundColor: "#ff923e" }}
                   >
                     Voir sur GitHub
                     <ExternalLink className="w-4 h-4" />
@@ -78,6 +82,23 @@ export default function ProjectsGrid() {
             </AnimatedSection>
           ))}
         </div>
+
+        {/* Bouton Voir plus / Voir moins */}
+        {projects.length > 6 && (
+          <AnimatedSection animation="slideUp" delay={200}>
+            <div className="flex justify-center mt-10">
+              <button
+                type="button"
+                aria-expanded={showAll}
+                onClick={() => setShowAll((v) => !v)}
+                className="px-5 py-3 rounded-xl font-semibold text-white shadow-neumorphism-orange hover:shadow-neumorphism-orange-inset transition-all duration-300 active:scale-95"
+                style={{ backgroundColor: "#ff923e" }}
+              >
+                {showAll ? "Voir moins" : "Voir plus"}
+              </button>
+            </div>
+          </AnimatedSection>
+        )}
       </div>
     </section>
   );
