@@ -157,7 +157,7 @@ export default function ContactForm() {
                     icon: <Linkedin className="w-5 h-5" />,
                     label: "LinkedIn",
                     value: "linkedin.com/in/clara",
-                    href: "https://www.linkedin.com/in/clara-morin-14a166227/",
+                    href: "https://www.linkedin.com/in/claraa-mrn/",
                   },
                 ].map((contact, index) => (
                   <AnimatedSection
