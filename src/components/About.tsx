@@ -30,7 +30,7 @@ export default function About() {
                   className="text-lg leading-relaxed mb-6"
                   style={{ color: "#091433" }}
                 >
-                  À 21 ans, je suis une développeuse web full-stack passionnée,
+                  À 22 ans, je suis une développeuse web full-stack passionnée,
                   spécialisée dans la création d'applications web modernes et
                   performantes. Mon expertise couvre l'ensemble du développement
                   web, du frontend au backend.
@@ -51,7 +51,7 @@ export default function About() {
           <AnimatedSection animation="slideRight" delay={400}>
             <div className="space-y-6">
               {[
-                { label: "Expérience", value: "4+ années" },
+                { label: "Expérience", value: "5+ années" },
                 { label: "Projets réalisés", value: "20+" },
                 { label: "Technologies maîtrisées", value: "20+" },
               ].map((stat, index) => (
